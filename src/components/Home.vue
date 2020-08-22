@@ -6,8 +6,8 @@
       <div class="center" v-if="loading">{{loadingText}}</div>
       <div class="countries" >
         <div class="country" v-for="country in showedCountries" v-bind:key="country.name">
-          <div class="country-img"><router-link :to= "`country/${country.alpha3Code.toLocaleLowerCase()}`"><img :src="country.flag"/></router-link ></div>
-          <div class="country-name"><h3><router-link :to= "`country/${country.alpha3Code.toLocaleLowerCase()}`">{{country.name}} ({{country.nativeName}})</router-link></h3></div>
+          <div class="country-img"><router-link :to= "`country/${country.alpha3Code.toLowerCase()}`"><img :src="country.flag"/></router-link ></div>
+          <div class="country-name"><h3><router-link :to= "`country/${country.alpha3Code.toLowerCase()}`">{{country.name}} ({{country.nativeName}})</router-link></h3></div>
         </div>
       </div>
       <Pagination :page="page" :total-page="pageCount"></Pagination>
